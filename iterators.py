@@ -1,3 +1,11 @@
+import random
+
+# -----------------iterators-------------------
+# An iterator is an object that implements the iterator protocol, which consists of the methods __iter__() and __next__()
+# An iterable is an object that implements the __iter__() method, which returns an iterator object
+# Iteators need their own state to keep track of the current element, so they can't be used more than once
+
+
 class numbers_iter:
     def __init__(self, start):
         self.start_state = start
@@ -74,7 +82,27 @@ for i in MyIterable(1, 10):
     print(i)
 
 
-# numbers using generator
+# -----------------Sentinels-------------------
+
+# the function will be called on very call of next, and StopIteration will be raised when the function returns sentinel
+# iter(function, sentinel)
+
+def random_numbers():
+    num = random.randint(1, 10)
+    print(f"random_numbers() called, returning {num}")
+    return num
+
+
+random_iter = iter(random_numbers, 4)
+for i in random_iter:
+    print(i)  # will not print 4
+
+for i in iter(random_numbers, 4):
+    print(i)  # will not print 4
+
+# ---------------Generator------------------
+
+
 def numbers_gen(start):
     while True:
         yield start
