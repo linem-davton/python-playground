@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 
 def bench_multiply():
@@ -13,3 +14,4 @@ def bench_multiply():
 
 if __name__ == '__main__':
     bench_multiply()
+    print(math.floor(13.2323532523 * 100)/100)
