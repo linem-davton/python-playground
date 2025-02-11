@@ -42,6 +42,6 @@ if __name__ == "__main__":
 
     # Draw the tree
     plt.figure(figsize=(10, 6))
-    nx.draw(graph, pos, with_labels=True)
+    nx.draw(graph, pos, with_labels=True, font_weight='bold', node_size=2000, node_color='lightblue')
     plt.title("Decision Tree for Permutations of [1, 2, 3] with Backtracking")
     plt.show()
