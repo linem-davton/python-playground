@@ -2,4 +2,5 @@ numpy
 networkx
 pandas
 matplotlib
+pygraphviz
 PyQt5

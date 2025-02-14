@@ -6,6 +6,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Dependencies
+
+- [Graphviz](https://pygraphviz.github.io/documentation/stable/install.html)
+
+```BASH
+sudo apt-get install graphviz graphviz-dev
+```
+
 ## Benchmarks
 
 ```BASH
