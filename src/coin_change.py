@@ -33,7 +33,7 @@ def draw_graph(G):
 
 
 if __name__ == "__main__":
-    N = 5
-    coins = [1, 2, 3]
+    N = 10
+    coins = [2, 3, 5]
     G = coin_change_graph(N, coins)
     draw_graph(G)
